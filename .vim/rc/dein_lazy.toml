@@ -1,0 +1,74 @@
+# 遅延読み込み
+[[plugins]]
+repo  = 'lervag/vimtex'
+on_ft = ['tex']
+
+#[[plugins]]
+#repo = 'Shougo/neoinclude.vim'
+#on_ft = ['c', 'cpp']
+#depends = ['neocomplete.vim']
+
+#なにか問題らしい
+#[[plugins]]
+#repo = 'justmao945/vim-clang'
+#on_ft = ['c', 'cpp']
+#hook_source = 'source ~/dotfiles/.vim/autoload/hyokoji/clang.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1 #インサートモードに入ったら読み込む
+depends = ['vimtex','neoinclude.vim','neco-vim','neco-look']
+hook_source = 'call hyokoji#deoplete#hook_source()'
+
+#markdownの設定
+[[plugins]]
+repo = 'tpope/vim-markdown'
+on_ft = ['markdown']
+hook_source = 'let g:markdown_syntax_conceal = 0'
+
+[[plugins]]
+repo = 'iamcco/markdown-preview.vim'
+on_ft = ['markdown']
+
+[[plugins]]
+repo = 'iamcco/mathjax-support-for-mkdp'
+on_source = ['vim-markdown']
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+#[[plugins]]
+#repo = 'Valloric/YouCompleteme'
+#on_ft = ['c','cpp']
+
+[[plugins]]
+repo = 'ujihisa/neco-look'
+on_ft = ['markdown','tex']
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_i = 1
+depends = ['neosnippet-snippets']
+hook_source = 'source ~/dotfiles/.vim/autoload/hyokoji/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/neco-vim'
+on_ft = ['vim']
+
+#[[plugins]]
+#repo = 'Shougo/vimfiler'
+#on_source = ['unite.vim']
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'tbodt/deoplete-tabnine'
+on_source = ['deoplete.nvim']
+

@@ -1,0 +1,72 @@
+\documentclass[dvipdfmx,uplatex,titlepage]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{bm}
+\usepackage{multicol}
+\usepackage{here}
+\usepackage{amsmath,amssymb}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{ascmac}
+\usepackage[hang,small,bf]{caption}
+\usepackage[subrefformat=parens]{subcaption}
+\captionsetup{compatibility=false}
+
+
+\title{template}
+\author{}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{eqnarray}
+\end{eqnarray}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{mat_vec_n_384.pdf}
+    \captionsetup{labelformat=empty,labelsep=none}
+    \caption{行列の大きさ384}
+\end{figure}
+
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single]
+#include<stdio.h>
+
+#define N 12000
+
+int main(){
+    int i;
+    int a=13;
+    int b=5;
+    int m=24;
+    int x[N];
+
+    x[0] = 8;
+
+    for(i=1;i<N;i++){
+        x[i]=( a * x[i-1] + b ) % m;
+    }
+
+    for(i=0;i<N;i=i+3){
+        printf("%d %d %d \n",x[i],x[i+1],x[i+2]);
+    }
+
+}
+\end{lstlisting}
+
+
+\begin{itembox}[l]{ベイズの定理}
+    \begin{eqnarray}
+        \label{eq32}
+        P( \omega _i | x_t) &=& \frac { P( \omega _i , x_t ) } {P(x_t)} \nonumber\\
+         &=& \frac { P( \omega _i ) \cdot P(x_t| \omega _i)} {P(x_t)} \nonumber\\
+                            &=& \frac { \pi _i  \cdot P(x_t| \omega _i)} {P(x_t)}
+    \end{eqnarray}
+\end{itembox}
+
+\end{document}
+
+

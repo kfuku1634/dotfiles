@@ -1,0 +1,1 @@
+/Users/kouki/dotfiles/.vim/vimrc
