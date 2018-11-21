@@ -3,6 +3,10 @@
 repo  = 'lervag/vimtex'
 on_ft = ['tex']
 
+[[plugins]]
+repo  = 'h1mesuke/vim-alignta'
+on_ft = ['txt']
+
 #[[plugins]]
 #repo = 'Shougo/neoinclude.vim'
 #on_ft = ['c', 'cpp']
