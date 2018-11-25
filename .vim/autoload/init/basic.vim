@@ -50,7 +50,7 @@ let g:tex_conceal=''
 
 if has('persistent_undo')
     set undodir=~/.vim/undo
-    set undofile 
+    set undofile
 endif
 
 "for python
