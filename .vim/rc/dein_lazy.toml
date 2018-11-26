@@ -21,7 +21,7 @@ on_ft = ['txt']
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_i = 1 #インサートモードに入ったら読み込む
-depends = ['vimtex','neoinclude.vim','neco-vim','neco-look']
+depends = ['vimtex','neco-vim','neco-look']
 hook_source = 'call hyokoji#deoplete#hook_source()'
 
 #markdownの設定

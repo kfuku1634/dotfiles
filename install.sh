@@ -22,6 +22,9 @@ if [ ${OS} == 'Mac' ]; then
     ln -snf ${PWD}/.vim  ${HOME}/.config/nvim/
     ln -snf ${PWD}/.vim/vimrc ${HOME}/.config/nvim/init.vim
 
+    pip install neovim
+    pip3 install neovim
+
 if [ ! -e ${HOME}/.cache/dein/repos/github.com/tbodt/deoplete-tabnine/rplugin ] ;then
     ${HOME}/.cache/dein/repos/github.com/tbodt/deoplete-tabnine/install.sh
 fi
