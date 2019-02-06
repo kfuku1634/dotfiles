@@ -45,6 +45,8 @@ nnoremap <C-h> <C-?>
 nnoremap j gj
 nnoremap k gk
 nnoremap e i <Esc>
+nnoremap <up>   :bp<cr>
+nnoremap <down> :bn<cr>
 
 let g:tex_conceal=''
 
