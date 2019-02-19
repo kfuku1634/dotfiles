@@ -36,3 +36,10 @@ hook_post_update = 'source ~/dotfiles/.vim/autoload/hyokoji/vimproc.vim'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+hook_add = 'source ~/dotfiles/.vim/autoload/hyokoji/nerdcommenter.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = 'source ~/dotfiles/.vim/autoload/hyokoji/nerdtree.vim'
