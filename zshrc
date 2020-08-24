@@ -1,11 +1,39 @@
+#####################
+###    plugin     ###
+#####################
+source ~/.zplug/init.zsh
+zplug "b4b4r07/enhancd", use:init.sh
 
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+setopt auto_cd
+
+# プラグインを読み込み、コマンドにパスを通す
+zplug load --verbose
+
+autoload -Uz compinit
+compinit
 autoload -U colors
 colors
 
+# vi keybind
+bindkey -v
+
+#####################
+###    prompt     ###
+#####################
 #PROMPT format and color
 PROMPT="%{$fg[red]%}[%n@%m]%{$reset_color%} $ "
 RPROMPT="%{${fg[red]}%}[%~]%{${reset_color}%}"
 
+#####################
+###   ls color    ###
+#####################
 # ls color setting
 export LSCOLORS=exfxcxdxbxegedabagacad
 export LS_COLORS='di=01;34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=01;34'
@@ -41,3 +69,5 @@ setopt EXTENDED_HISTORY
 #history search
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
+
+
