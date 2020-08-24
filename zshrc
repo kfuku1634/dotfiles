@@ -17,3 +17,27 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # set background color of current selected complement canditate
 zstyle ':completion:*' menu select=1
+
+
+#####################
+###    history    ###
+#####################
+
+#履歴ファイルの保存先
+export HISTFILE=${HOME}/.zsh_history
+
+# メモリに保存される履歴の件数
+export HISTSIZE=10000
+
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=1000000
+
+# 重複を記録しない
+setopt hist_ignore_dups
+
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
+
+#history search
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
