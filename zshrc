@@ -70,4 +70,6 @@ setopt EXTENDED_HISTORY
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
+# 履歴の共有
+setopt share_history
 
